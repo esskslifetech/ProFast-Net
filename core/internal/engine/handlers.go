@@ -17,13 +17,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/esskslifetech/profast-net/core/internal/consent"
-	"github.com/esskslifetech/profast-net/core/internal/defense"
-	"github.com/esskslifetech/profast-net/core/internal/firewall"
-	"github.com/esskslifetech/profast-net/core/internal/ipc"
-	"github.com/esskslifetech/profast-net/core/internal/mirage"
-	"github.com/esskslifetech/profast-net/core/internal/scan"
-	"github.com/esskslifetech/profast-net/core/internal/version"
+	"github.com/esskslifetech/ProFast-Net/core/internal/consent"
+	"github.com/esskslifetech/ProFast-Net/core/internal/defense"
+	"github.com/esskslifetech/ProFast-Net/core/internal/firewall"
+	"github.com/esskslifetech/ProFast-Net/core/internal/ipc"
+	"github.com/esskslifetech/ProFast-Net/core/internal/mirage"
+	"github.com/esskslifetech/ProFast-Net/core/internal/scan"
+	"github.com/esskslifetech/ProFast-Net/core/internal/version"
 )
 
 func decodeParams[T any](raw json.RawMessage, out *T) error {

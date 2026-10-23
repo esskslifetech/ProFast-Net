@@ -34,5 +34,5 @@ All notable changes to ProFast-Net are recorded here. The format follows
 - Documentation: architecture, protocol, security model and kernel tier.
 - CI on Linux, macOS and Windows for the native, Python and Go layers.
 
-[Unreleased]: https://github.com/esskslifetech/profast-net/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/esskslifetech/profast-net/releases/tag/v0.1.0
+[Unreleased]: https://github.com/esskslifetech/ProFast-Net/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/esskslifetech/ProFast-Net/releases/tag/v0.1.0

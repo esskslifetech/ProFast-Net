@@ -1,3 +1,3 @@
-module github.com/esskslifetech/profast-net/core
+module github.com/esskslifetech/ProFast-Net/core
 
 go 1.22

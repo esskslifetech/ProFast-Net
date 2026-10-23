@@ -10,8 +10,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/esskslifetech/profast-net/core/internal/config"
-	"github.com/esskslifetech/profast-net/core/internal/qos"
+	"github.com/esskslifetech/ProFast-Net/core/internal/config"
+	"github.com/esskslifetech/ProFast-Net/core/internal/qos"
 )
 
 // Session describes an active focus window.

@@ -32,11 +32,11 @@ gui = ["PySide6>=6.5"]
 dev = ["pytest>=7.4", "pytest-timeout>=2.1"]
 
 [project.urls]
-Homepage = "https://github.com/esskslifetech/profast-net"
-Repository = "https://github.com/esskslifetech/profast-net"
-Issues = "https://github.com/esskslifetech/profast-net/issues"
-Changelog = "https://github.com/esskslifetech/profast-net/blob/main/CHANGELOG.md"
-Security = "https://github.com/esskslifetech/profast-net/blob/main/SECURITY.md"
+Homepage = "https://github.com/esskslifetech/ProFast-Net"
+Repository = "https://github.com/esskslifetech/ProFast-Net"
+Issues = "https://github.com/esskslifetech/ProFast-Net/issues"
+Changelog = "https://github.com/esskslifetech/ProFast-Net/blob/main/CHANGELOG.md"
+Security = "https://github.com/esskslifetech/ProFast-Net/blob/main/SECURITY.md"
 
 [project.scripts]
 profast = "profast.cli:main"

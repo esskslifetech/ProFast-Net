@@ -11,14 +11,14 @@ import (
 	"sync"
 	"time"
 
-	"github.com/esskslifetech/profast-net/core/internal/config"
-	"github.com/esskslifetech/profast-net/core/internal/consent"
-	"github.com/esskslifetech/profast-net/core/internal/defense"
-	"github.com/esskslifetech/profast-net/core/internal/firewall"
-	"github.com/esskslifetech/profast-net/core/internal/focus"
-	"github.com/esskslifetech/profast-net/core/internal/mirage"
-	"github.com/esskslifetech/profast-net/core/internal/scan"
-	"github.com/esskslifetech/profast-net/core/internal/version"
+	"github.com/esskslifetech/ProFast-Net/core/internal/config"
+	"github.com/esskslifetech/ProFast-Net/core/internal/consent"
+	"github.com/esskslifetech/ProFast-Net/core/internal/defense"
+	"github.com/esskslifetech/ProFast-Net/core/internal/firewall"
+	"github.com/esskslifetech/ProFast-Net/core/internal/focus"
+	"github.com/esskslifetech/ProFast-Net/core/internal/mirage"
+	"github.com/esskslifetech/ProFast-Net/core/internal/scan"
+	"github.com/esskslifetech/ProFast-Net/core/internal/version"
 )
 
 // Peer is a node that proved knowledge of the cluster secret.

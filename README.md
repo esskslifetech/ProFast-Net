@@ -1,6 +1,6 @@
 # ProFast-Net
 
-[![ci](https://github.com/esskslifetech/profast-net/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/esskslifetech/profast-net/actions/workflows/ci.yml)
+[![ci](https://github.com/esskslifetech/ProFast-Net/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/esskslifetech/ProFast-Net/actions/workflows/ci.yml)
 [![license](https://img.shields.io/badge/license-MIT-3da639.svg)](LICENSE)
 [![python](https://img.shields.io/badge/python-3.10%2B-3776ab.svg)](python/pyproject.toml)
 [![go](https://img.shields.io/badge/go-1.22-00add8.svg)](core/go.mod)

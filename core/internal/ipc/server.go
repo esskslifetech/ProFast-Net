@@ -15,7 +15,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/esskslifetech/profast-net/core/internal/version"
+	"github.com/esskslifetech/ProFast-Net/core/internal/version"
 )
 
 const maxMessage = 4 << 20 // 4 MiB is plenty for a status document.

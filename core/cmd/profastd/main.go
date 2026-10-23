@@ -18,11 +18,11 @@ import (
 	"runtime"
 	"syscall"
 
-	"github.com/esskslifetech/profast-net/core/internal/config"
-	"github.com/esskslifetech/profast-net/core/internal/engine"
-	"github.com/esskslifetech/profast-net/core/internal/firewall"
-	"github.com/esskslifetech/profast-net/core/internal/ipc"
-	"github.com/esskslifetech/profast-net/core/internal/version"
+	"github.com/esskslifetech/ProFast-Net/core/internal/config"
+	"github.com/esskslifetech/ProFast-Net/core/internal/engine"
+	"github.com/esskslifetech/ProFast-Net/core/internal/firewall"
+	"github.com/esskslifetech/ProFast-Net/core/internal/ipc"
+	"github.com/esskslifetech/ProFast-Net/core/internal/version"
 )
 
 func main() {
