@@ -34,7 +34,7 @@ int status_from_errno(int err) {
     case EPERM:
         return PF_EPERM;
     case ENOTSUP:
-#ifdef EOPNOTSUPP
+#if defined(EOPNOTSUPP) && (EOPNOTSUPP != ENOTSUP)
     case EOPNOTSUPP:
 #endif
         return PF_ENOTSUP;

@@ -51,9 +51,10 @@ jobs:
           python - <<'PY'
           import json
           data = json.load(open("vectors.json"))
-          assert data["address"] == "fd41:ae7d:9004:782d:a2d2:c2ca:7166:0e99", data["address"]
-          assert data["port"] == 35239, data["port"]
-          assert data["token"] == "AAAAAQAAAAAAAAPoAAECAwQFBgcICQoLDA0OD_xKMVWkDMvZK13nmJsm1YE"
+          mirage = data["mirage"]
+          assert mirage["address"] == "fd41:ae7d:9004:782d:a2d2:c2ca:7166:0e99", mirage["address"]
+          assert mirage["port"] == 35239, mirage["port"]
+          assert data["spa"]["token"] == "AAAAAQAAAAAAAAPoAAECAwQFBgcICQoLDA0OD_xKMVWkDMvZK13nmJsm1YE", data["spa"]["token"]
           print("vectors ok")
           PY
 
@@ -98,7 +99,9 @@ jobs:
 
       - uses: actions/setup-go@v5
         with:
-          go-version: "1.22"
+          # macOS 26 kills Go test binaries older than 1.23 (missing LC_UUID)
+          # with "signal: abort trap"; 1.23 is the first toolchain that emits it.
+          go-version: "1.23"
 
       - name: Format
         if: runner.os == 'Linux'
@@ -111,4 +114,17 @@ jobs:
         run: go build ./cmd/profastd
 
       - name: Test
-        run: go test ./...
+        shell: bash
+        run: |
+          set -o pipefail
+          go test -count=1 -v ./... 2>&1 | tee go-test.log
+
+      - name: Report test failures
+        if: failure()
+        shell: bash
+        run: |
+          if [ -f go-test.log ]; then
+            tail -n 30 go-test.log | while IFS= read -r line; do
+              echo "::error::$line"
+            done
+          fi

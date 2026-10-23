@@ -53,6 +53,13 @@ endforeach()
 set_target_properties(profast_native PROPERTIES OUTPUT_NAME profast_native)
 set_target_properties(profast_native_static PROPERTIES OUTPUT_NAME profast_native)
 
+if(WIN32)
+    # MSVC names the import library of a shared target <OUTPUT_NAME>.lib, which
+    # would collide with the static archive of the same name. Static consumers
+    # (pfbench, tests, the Python wheel) link the archive, keep it distinct.
+    set_target_properties(profast_native_static PROPERTIES OUTPUT_NAME profast_native_static)
+endif()
+
 if(PF_BUILD_TOOLS)
     add_executable(pfbench tools/pfbench.cpp)
     target_link_libraries(pfbench PRIVATE profast_native_static)
