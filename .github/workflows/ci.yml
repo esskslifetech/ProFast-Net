@@ -97,7 +97,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-go@v5
+      - uses: actions/setup-go@v7
         with:
           # macOS 26 kills Go test binaries older than 1.23 (missing LC_UUID)
           # with "signal: abort trap"; 1.23 is the first toolchain that emits it.
