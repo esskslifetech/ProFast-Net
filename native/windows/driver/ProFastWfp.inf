@@ -1,0 +1,47 @@
+; ProFast-Net WFP callout driver manifest (skeleton).
+;
+; Signing: kernel-mode drivers must be signed with an EV certificate and
+; submitted to the Microsoft Hardware Dev Center for attestation signing.
+; Test machines can use `bcdedit /set testsigning on` plus a self-signed cert
+; added to the Trusted Root and Trusted Publishers stores.
+;
+; The INF is listed so that packaging is reproducible; the driver is not built
+; by the repository CI because the WDK is not available on hosted runners.
+
+[Version]
+Signature   = "$WINDOWS NT$"
+Class       = NetService
+ClassGuid   = {4d36e974-e325-11ce-bfc1-08002be10318}
+Provider    = %Provider%
+CatalogFile = ProFastWfp.cat
+DriverVer   = 10/22/2026,0.1.0.0
+PnpLockdown = 1
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+[Manufacturer]
+%Provider% = ProFast,NTamd64
+
+[ProFast.NTamd64]
+%ProFastWfp.DeviceDesc% = ProFastWfp_Install, ROOT\ProFastWfp
+
+[ProFastWfp_Install.NT]
+CopyFiles = ProFastWfp_CopyFiles
+
+[ProFastWfp_CopyFiles]
+profast_wfp.sys
+
+[ProFastWfp_Install.NT.Services]
+AddService = ProFastWfp, 0x00020002, ProFastWfp_Service
+
+[ProFastWfp_Service]
+DisplayName   = %ProFastWfp.DeviceDesc%
+ServiceType   = 1
+StartType     = 3
+ErrorControl  = 1
+ServiceBinary = %12%\profast_wfp.sys
+
+[Strings]
+Provider                 = "ProFast-Net contributors"
+ProFastWfp.DeviceDesc    = "ProFast-Net WFP callout driver"

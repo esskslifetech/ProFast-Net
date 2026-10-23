@@ -1,0 +1,16 @@
+# Normalize source to LF in the repository so that gofmt, shell scripts and the
+# macOS/Linux builds see the same bytes no matter which OS committed the file.
+* text=auto eol=lf
+
+# Windows-only tooling keeps its native line endings.
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.inf text eol=crlf
+
+# Never touch binaries.
+*.png binary
+*.jpg binary
+*.ico binary
+*.sys binary
+*.bpf.o binary

@@ -1,0 +1,46 @@
+name: Feature request
+description: Propose a capability or a change in behaviour
+title: "[feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What is hard, missing or unsafe today? Describe the situation rather than the patch.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behaviour
+      description: What should ProFast-Net do, and which layer should own it?
+    validations:
+      required: true
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Layer
+      options:
+        - Python CLI, TUI or GUI
+        - Go daemon (profastd)
+        - Python reference daemon (profast serve)
+        - Native core (pfbench, libprofast_native)
+        - Kernel tier (WFP, XDP, NetworkExtension)
+        - Documentation, build or CI
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Workarounds, other designs, or why the obvious approach does not fit.
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: Project constraints
+      options:
+        - label: The proposal keeps the Go daemon on the standard library only
+        - label: The proposal does not send traffic back to an attacker
+        - label: The proposal does not weaken the consent-token requirement
+        - label: I am willing to open a pull request for this

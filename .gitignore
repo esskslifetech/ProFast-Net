@@ -1,0 +1,66 @@
+# build output
+build/
+out/
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.exe
+*.pdb
+
+# kernel artifacts (built by hand, never committed)
+*.sys
+*.inf.bak
+*.bpf.o
+*.vmlinux.h
+native/linux/xdp/profast-xdp
+
+# python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+.venv/
+venv/
+dist/
+.coverage
+htmlcov/
+
+# go
+core/profastd
+core/profastd.exe
+*.test
+coverage.out
+
+# editors and OS noise
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# local runtime state
+*.log
+profast-endpoint.json
+
+# local secrets and machine-specific tooling
+.env
+.env.*
+!.env.example
+*.code-workspace
+
+# cmake and visual studio
+cmake-build-*/
+CMakeUserPresets.json
+.vs/
+*.ilk
+*.exp
+*.dSYM/
+
+# go workspace files
+go.work
+go.work.sum

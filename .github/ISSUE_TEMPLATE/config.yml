@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a vulnerability privately
+    url: https://github.com/esskslifetech/profast-net/security/advisories/new
+    about: Never disclose a security problem in a public issue.
+  - name: Read the documentation
+    url: https://github.com/esskslifetech/profast-net/tree/main/docs
+    about: Architecture, protocol, security model and kernel tier.

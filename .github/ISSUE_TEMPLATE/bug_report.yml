@@ -1,0 +1,83 @@
+name: Bug report
+description: Something behaves differently from what the docs say
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Do not report security vulnerabilities here.** Follow
+        [SECURITY.md](https://github.com/esskslifetech/profast-net/blob/main/SECURITY.md)
+        and use GitHub's private advisory form instead.
+
+        Please run `profast doctor` first and paste its output below.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you observed, and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. profast ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Layer
+      options:
+        - Python CLI, TUI or GUI
+        - Go daemon (profastd)
+        - Python reference daemon (profast serve)
+        - Native core (pfbench, libprofast_native)
+        - Kernel tier (WFP, XDP, NetworkExtension)
+        - Documentation, build or CI
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows 11
+        - Windows 10
+        - macOS
+        - Linux
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      description: The release number, or the commit hash you built from.
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: textarea
+    id: doctor
+    attributes:
+      label: profast doctor output
+      render: text
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs or error output
+      description: Remove tokens, endpoint paths and anything else you would not post publicly.
+      render: text
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I reproduced this on the latest `main`
+          required: true
+        - label: This is not a security vulnerability
+          required: true

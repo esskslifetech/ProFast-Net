@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use ProFast-Net in your work, please cite it as below."
+title: "ProFast-Net"
+abstract: >-
+  Cross-platform network supervisor: focus a workload, inventory listening
+  sockets, defend the host with tarpits and escalating bans, and require an
+  explicit consent token before terminating anything. Control plane in Python,
+  daemon in Go, cryptographic core in C++17.
+type: software
+authors:
+  - family-names: Soni
+    given-names: Kanishk
+    alias: K-S
+    affiliation: "ESS KS Life Tech"
+version: 0.1.0
+date-released: 2026-10-23
+license: MIT
+license-url: "https://github.com/esskslifetech/profast-net/blob/main/LICENSE"
+repository-code: "https://github.com/esskslifetech/profast-net"
+url: "https://github.com/esskslifetech/profast-net"
+keywords:
+  - network security
+  - firewall
+  - single packet authorization
+  - qos
+  - windows
+  - linux
+  - macos

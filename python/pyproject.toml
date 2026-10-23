@@ -1,0 +1,61 @@
+[project]
+name = "profast-net"
+version = "0.1.0"
+description = "ProFast-Net: concentrated networking, rotating identity, self-defending firewall"
+readme = { text = "ProFast-Net control plane: CLI, TUI, desktop GUI and reference daemon. Architecture, protocol and security docs live in the repository root.", content-type = "text/markdown" }
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "Kanishk Soni (K-S)" }]
+maintainers = [{ name = "Kanishk Soni (K-S), ESS KS Life Tech" }]
+keywords = ["network", "firewall", "spa", "qos", "security"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: System Administrators",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: System :: Networking :: Firewalls",
+]
+dependencies = [
+    "psutil>=5.9",
+    "rich>=13.0",
+]
+
+[project.optional-dependencies]
+gui = ["PySide6>=6.5"]
+dev = ["pytest>=7.4", "pytest-timeout>=2.1"]
+
+[project.urls]
+Homepage = "https://github.com/esskslifetech/profast-net"
+Repository = "https://github.com/esskslifetech/profast-net"
+Issues = "https://github.com/esskslifetech/profast-net/issues"
+Changelog = "https://github.com/esskslifetech/profast-net/blob/main/CHANGELOG.md"
+Security = "https://github.com/esskslifetech/profast-net/blob/main/SECURITY.md"
+
+[project.scripts]
+profast = "profast.cli:main"
+profastd-py = "profast.daemon:main"
+
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/profast"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

@@ -1,0 +1,12 @@
+# Default owner for the whole repository.
+* @Kanishk-Soni
+
+# Security-sensitive surfaces: consent, identity and the native ABI.
+/SECURITY.md                     @Kanishk-Soni
+/core/internal/consent/          @Kanishk-Soni
+/core/internal/mirage/           @Kanishk-Soni
+/python/src/profast/consent.py   @Kanishk-Soni
+/python/src/profast/mirage.py    @Kanishk-Soni
+/native/src/capi.cpp             @Kanishk-Soni
+/native/src/mirage.cpp           @Kanishk-Soni
+/native/windows/                 @Kanishk-Soni

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Granted per team id by Apple. Request the content-filter-provider value
+         explicitly; a build without it will install but never receive flows. -->
+    <key>com.apple.developer.networking.networkextension</key>
+    <array>
+        <string>content-filter-provider</string>
+    </array>
+    <!-- The daemon and the extension exchange policy through this group. -->
+    <key>com.apple.security.application-groups</key>
+    <array>
+        <string>group.com.profast.net</string>
+    </array>
+    <key>com.apple.security.network.client</key>
+    <true/>
+    <key>com.apple.security.network.server</key>
+    <true/>
+</dict>
+</plist>
